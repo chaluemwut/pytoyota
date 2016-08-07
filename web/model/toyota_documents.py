@@ -3,7 +3,7 @@ from config import Config
 from bson.objectid import ObjectId
 import datetime, os
 
-connect('toyoya', host=os.environ['TOYOTA_DB_1_PORT_27017_TCP_ADDR'])
+connect('toyoya', host=os.environ['DB_1_PORT_27017_TCP_ADDR'])
 
 class Problem(Document):
     problem_level = StringField()
