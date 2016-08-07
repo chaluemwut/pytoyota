@@ -20,6 +20,7 @@ class LoginController(ViewController):
 
 class List(ViewController):
     def process(self):
+        print('******* start list')
         self.page_name = 'list.html' 
         return {'result':Problem.objects}       
 
