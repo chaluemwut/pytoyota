@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>Toyota</title>
+<link href="{{ url_for('static', filename='css/bootstrap.css') }}"
+	rel="stylesheet" type="text/css" />
+<link href="{{ url_for('static', filename='css/jquery-ui.css') }}"
+	rel="stylesheet" type="text/css" />	
+<link href="{{ url_for('static', filename='font-awesome/css/font-awesome.css') }}" rel="stylesheet"/>	
+<link href="{{ url_for('static', filename='css/namechercker.css') }}" rel="stylesheet"/>
+</head>
+
+<style type="text/css">
+.h-divider{
+ margin-top:5px;
+ margin-bottom:5px;
+ height:1px;
+ width:100%;
+ border-top:1px solid gray;
+}
+</style>
+
+<body>
+
+<div class='container' style="width: 100%; margin: 0 auto;">
+
+	<div class='row'>
+    	<div class='col-md-6 col-sm-4' style="padding-top: 30px; width: 50%;">
+        	<span style="margin-left: 50px; color: #3fa9f5; font-size: 20px;">
+        	Toyota
+        	</span>
+        </div>
+        
+        {% block left_menu %}
+        {% endblock %}
+    </div>
+    
+    <div style="height:1px; margin-left: 50px; margin-top: 15px; border-top:1px solid gray;">
+    </div>
+    
+    {% block content %}
+    {% endblock %}
+
+</div>
+
+</body>
+</html>

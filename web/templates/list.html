@@ -1,0 +1,22 @@
+{%extends "base.html" %} 
+
+{% block content %}
+<div style="margin-top: 10px;">
+	<div align="center">
+		<button class='btn namechecker_btn' style="width: 15%;" onclick="window.location='/add'">Add new records</button>
+	</div>
+
+	<table style="margin-left: 20%;">
+		<thead>
+			<td>ระดับปัญหา</td>
+			<td>เรื่อง</td>
+		</thead>
+	{% for p in result %}
+		<tr>
+			<td>{{p.problem_level}}</td>
+			<td>{{p.title}}</td>
+		</tr>
+	{%endfor%}
+	</table>
+</div>
+{% endblock %}

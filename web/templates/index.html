@@ -1,0 +1,29 @@
+{%extends "base.html" %} {% block content %}
+<form action='/toyota/login' method='post'>
+	<div>
+		<div align="center">
+
+			{%if error %}
+			<div class="alert alert-danger">
+				<strong>{{error}}</strong>
+			</div>
+			{%endif %}
+			
+			<div class="input-group" style="width: 50%; margin-top: 20px;">
+				<span class="input-group-addon" id="basic-addon1"
+					style="height: 30px;"><i class="fa fa-envelope"
+					aria-hidden="true"></i></span> <input type="text" name="email"
+					class="form-control" placeholder="Email" />
+			</div>
+			<div class="input-group" style="width: 50%; margin-top: 20px;">
+				<span class="input-group-addon" id="basic-addon1"
+					style="height: 30px;"> <i class="fa fa-key"
+					aria-hidden="true"></i>
+				</span> <input type="password" name="password" class="form-control"
+					placeholder="รหัสผ่าน" />
+			</div>
+			<button class='btn namechecker_btn' style="width: 15%;">ตกลง</button>
+		</div>
+	</div>
+</form>
+{% endblock %}
