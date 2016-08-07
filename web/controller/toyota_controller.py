@@ -12,7 +12,7 @@ class LoginController(ViewController):
         param = self.get_post(['email','password'])
         if param['email'] == 'toyota' and param['password'] == 'toyota':
             self.page_controller = True
-            self.page_name = url_for('toyota.list', _external=True)
+            self.page_name = url_for('toyota.list')
             return {}
         else:
             self.page_name = 'index.html'
@@ -33,7 +33,7 @@ class Save(ViewController):
         problem.message = param['message']
         problem.save()
         self.page_controller = True
-        self.page_name = url_for('toyota.list', _external=True)        
+        self.page_name = url_for('toyota.list')        
         return {}
     
 toyota.add_url_rule(app_name+'/login', view_func=LoginController.as_view('login'), methods=['post'])
