@@ -6,6 +6,7 @@ web:
   links:
     - db
   volumes:
+    - ./web:/web    
     - /etc/timezone:/etc/timezone
     - /etc/localtime:/etc/localtime:ro   
   command: /usr/local/bin/gunicorn -w 2 -b :4041 server:app
