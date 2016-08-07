@@ -11,9 +11,8 @@ class LoginController(ViewController):
     def process(self):
         param = self.get_post(['email','password'])
         if param['email'] == 'toyota' and param['password'] == 'toyota':
-            self.page_controller = True
-            self.page_name = url_for('toyota.list', _external=True)
-            return {}
+            self.page_name = 'list.html' 
+            return {'result':Problem.objects}   
         else:
             self.page_name = 'index.html'
             return {'error':'User name password not correct'}
@@ -32,9 +31,8 @@ class Save(ViewController):
         problem.title = param['title']
         problem.message = param['message']
         problem.save()
-        self.page_controller = True
-        self.page_name = url_for('toyota.list')        
-        return {}
+        self.page_name = 'list.html' 
+        return {'result':Problem.objects}
     
 toyota.add_url_rule(app_name+'/login', view_func=LoginController.as_view('login'), methods=['post'])
 toyota.add_url_rule(app_name+'/list', view_func=List.as_view('list'))
