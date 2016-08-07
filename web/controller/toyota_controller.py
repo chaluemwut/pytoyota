@@ -12,7 +12,7 @@ class LoginController(ViewController):
         param = self.get_post(['email','password'])
         if param['email'] == 'toyota' and param['password'] == 'toyota':
             self.page_controller = True
-            self.page_name = url_for('toyota.list')
+            self.page_name = url_for('toyota.list', _external=True)
             return {}
         else:
             self.page_name = 'index.html'
