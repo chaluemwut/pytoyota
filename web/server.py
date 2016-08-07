@@ -13,7 +13,6 @@ app.config['db.host'] = Config.db_host
 app.config['db.port'] = int(Config.db_port)
 app.config['db.name'] = Config.db_name
 app.config['controller.user_model'] = False
-app.config['SERVER_NAME'] = 'fbcredibility.com:4041'
 
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT Rv]]jkojkiyd'
 
